@@ -1,0 +1,17 @@
+/* visual styles */
+body{
+  margin:0;
+  font-family:sans-serif;
+  font-size:28px;
+  line-height:100px;
+  color:#ffffff;
+  text-align:center;
+}
+
+section {
+  background: black;
+}
+
+.not-fullscreen {
+  height: 50%;
+}
