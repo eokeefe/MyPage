@@ -1,7 +1,8 @@
 /* detect touch */
-if("ontouchstart" in window){
+if("ontouchstart" in window) {
   document.documentElement.className = document.documentElement.className + " touch";
 }
+
 if(!$("html").hasClass("touch")){
   /* background fix */
   $(".parallax").css("background-attachment", "fixed");
@@ -18,6 +19,7 @@ function fullscreenFix(){
     }
   });
 }
+
 $(window).resize(fullscreenFix);
 fullscreenFix();
 
@@ -55,6 +57,7 @@ function backgroundResize(){
     path.css("background-size", imgW + "px " + imgH + "px");
   });
 }
+
 $(window).resize(backgroundResize);
 $(window).focus(backgroundResize);
 backgroundResize();
@@ -91,6 +94,7 @@ function parallaxPosition(e){
     }
   });
 }
+
 if(!$("html").hasClass("touch")){
   $(window).resize(parallaxPosition);
   //$(window).focus(parallaxPosition);
