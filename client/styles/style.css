@@ -7,11 +7,3 @@ body{
   color:#ffffff;
   text-align:center;
 }
-
-section {
-  background: black;
-}
-
-.not-fullscreen {
-  height: 50%;
-}

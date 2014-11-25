@@ -35,3 +35,6 @@ html, body {
   vertical-align:middle;
   text-align:center;
 }
+.not-fullscreen {
+  height: 50%;
+}

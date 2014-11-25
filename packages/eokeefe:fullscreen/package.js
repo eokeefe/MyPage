@@ -7,16 +7,25 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
-  api.use('jquery', 'client')
-  api.addFiles('eokeefe:fullscreen.js', 'client');
+  api.use([
+    'jquery',
+    'templating'
+  ], 'client');
 
-  api.export(
-    ['backgroundResize', 'parallaxPosition', 'fullscreenFix'],
-    'client');
+  api.addFiles([
+    'lib/src/eokeefe:fullscreen.js',
+    'lib/src/eokeefe:fullscreen.css'
+  ], 'client');
+
+  api.export([
+    'backgroundResize',
+    'parallaxPosition',
+    'fullscreenFix'
+  ],'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('eokeefe:fullscreen');
-  api.addFiles('eokeefe:fullscreen-tests.js', 'client');
+  api.addFiles('lib/tests/eokeefe:fullscreen-tests.js', 'client');
 });
