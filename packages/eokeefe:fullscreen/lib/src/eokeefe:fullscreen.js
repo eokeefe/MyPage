@@ -10,7 +10,7 @@ if(!$("html").hasClass("touch")){
 
 /* fix vertical when not overflow
 call fullscreenFix() if .fullscreen content changes */
-function fullscreenFix(){
+fullscreenFix = function (){
   var h = $('body').height();
   // set .fullscreen height
   $(".content-b").each(function(i){
@@ -21,10 +21,9 @@ function fullscreenFix(){
 }
 
 $(window).resize(fullscreenFix);
-fullscreenFix();
 
 /* resize background images */
-function backgroundResize(){
+backgroundResize = function (){
   var windowH = $(window).height();
   $(".background").each(function(i){
     var path = $(this);
@@ -60,10 +59,9 @@ function backgroundResize(){
 
 $(window).resize(backgroundResize);
 $(window).focus(backgroundResize);
-backgroundResize();
 
 /* set parallax background-position */
-function parallaxPosition(e){
+parallaxPosition = function (e){
   var heightWindow = $(window).height();
   var topWindow = $(window).scrollTop();
   var bottomWindow = topWindow + heightWindow;
@@ -93,11 +91,4 @@ function parallaxPosition(e){
       $(this).css("background-position", orizontalPosition + " " + value + "px");
     }
   });
-}
-
-if(!$("html").hasClass("touch")){
-  $(window).resize(parallaxPosition);
-  //$(window).focus(parallaxPosition);
-  $(window).scroll(parallaxPosition);
-  parallaxPosition();
 }

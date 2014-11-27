@@ -1,10 +1,82 @@
 <template name="layout">
-  <div class="fullscreen background" style="background-image:url('/images/img_1.jpg');"
-    data-img-width="1600" data-img-height="1064">
+  <div class="fullscreen background parallax" style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_6648.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
     <div class="content-a">
       <div class="content-b">
         Centered content
       </div>
     </div>
   </div>
+
+  <div class="not-fullscreen background parallax" style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_6643.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
+    <div class="content-a">
+      <div class="content-b">
+        Centered content
+      </div>
+    </div>
+  </div>
+
+  <section class="not-fullscreen">
+    <div class="content-a">
+      <div class="content-b">
+        Centered content
+      </div>
+    </div>
+  </section>
+
+  <div class="fullscreen background parallax" style="background-image:url('http://www.minimit.com/images/picjumbo.com_DSC_3274.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100" data-oriz-pos="100%">
+    <div class="content-a">
+      <div class="content-b">
+        Centered content
+      </div>
+    </div>
+  </div>
+
+  <section class="fullscreen">
+    <div class="content-a">
+      <div class="content-b">
+        Centered content
+      </div>
+    </div>
+  </section>
+
+  <div class="fullscreen background parallax" style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_9857.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
+    <div class="content-a">
+      <div class="content-b">
+        <br>Content overflow<br>Content overflow
+        <br>Content overflow<br>Content overflow
+        <br>Content overflow<br>Content overflow
+        <br>Content overflow<br>Content overflow
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="not-fullscreen background parallax" style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_8697.jpg');" data-img-width="1600" data-img-height="1064" data-diff="100">
+    <div class="content-a">
+      <div class="content-b">
+        Centered content
+      </div>
+    </div>
+  </div>
+
+  <section class="fullscreen">
+    <div class="content-a">
+      <div class="content-b">
+        Centered content
+      </div>
+    </div>
+  </section>
+
+  <script>
+    fullscreenFix();
+    backgroundResize();
+    parallaxPosition();
+
+    if(!$("html").hasClass("touch")){
+      $(window).resize(parallaxPosition);
+      //$(window).focus(parallaxPosition);
+      $(window).scroll(parallaxPosition);
+      parallaxPosition();
+    }
+  </script>
 </template>
