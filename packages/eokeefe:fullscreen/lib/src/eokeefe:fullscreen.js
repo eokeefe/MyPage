@@ -1,27 +1,3 @@
-/* detect touch */
-if("ontouchstart" in window) {
-  document.documentElement.className = document.documentElement.className + " touch";
-}
-
-if(!$("html").hasClass("touch")){
-  /* background fix */
-  $(".parallax").css("background-attachment", "fixed");
-}
-
-/* fix vertical when not overflow
-call fullscreenFix() if .fullscreen content changes */
-fullscreenFix = function (){
-  var h = $('body').height();
-  // set .fullscreen height
-  $(".content-b").each(function(i){
-    if($(this).innerHeight() <= h){
-      $(this).closest(".fullscreen").addClass("not-overflow");
-    }
-  });
-}
-
-$(window).resize(fullscreenFix);
-
 /* resize background images */
 backgroundResize = function (){
   var windowH = $(window).height();
@@ -56,9 +32,6 @@ backgroundResize = function (){
     path.css("background-size", imgW + "px " + imgH + "px");
   });
 }
-
-$(window).resize(backgroundResize);
-$(window).focus(backgroundResize);
 
 /* set parallax background-position */
 parallaxPosition = function (e){

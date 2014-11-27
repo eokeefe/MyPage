@@ -14,14 +14,12 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'lib/src/eokeefe:fullscreen.js',
-    'lib/src/eokeefe:fullscreen.css',
-    'lib/src/eokeefe:fullscreen.html'
+    'lib/src/eokeefe:fullscreen.css'
   ], 'client');
 
   api.export([
     'backgroundResize',
-    'parallaxPosition',
-    'fullscreenFix'
+    'parallaxPosition'
   ],'client');
 });
 
