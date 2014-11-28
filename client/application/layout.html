@@ -44,17 +44,17 @@
       $(".parallax").css("background-attachment", "fixed");
     }
 
-    $(window).resize(backgroundResize);
-    $(window).focus(backgroundResize);
+    $(window).resize(fullscreen.resize);
+    $(window).focus(fullscreen.resize);
 
-    backgroundResize();
-    parallaxPosition();
+    fullscreen.resize();
+    fullscreen.parallax();
 
     if(!$("html").hasClass("touch")){
-      $(window).resize(parallaxPosition);
-      //$(window).focus(parallaxPosition);
-      $(window).scroll(parallaxPosition);
-      parallaxPosition();
+      $(window).resize(fullscreen.parallax);
+      //$(window).focus(fullscreen.parallax);
+      $(window).scroll(fullscreen.parallax);
+      fullscreen.parallax();
     }
   </script>
 </template>

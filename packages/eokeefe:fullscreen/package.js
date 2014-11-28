@@ -7,20 +7,14 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
-  api.use([
-    'jquery',
-    'templating'
-  ], 'client');
+  api.use('jquery', 'client');
 
   api.addFiles([
     'lib/src/eokeefe:fullscreen.js',
     'lib/src/eokeefe:fullscreen.css'
   ], 'client');
 
-  api.export([
-    'backgroundResize',
-    'parallaxPosition'
-  ],'client');
+  api.export('fullscreen', 'client');
 });
 
 Package.onTest(function(api) {
