@@ -1,60 +1,23 @@
 <template name="layout">
-  <div class="fullscreen background parallax"
-    style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_6648.jpg');"
+  <div class="full-screen background parallax"
+    style="background-image:url('/images/img_1.jpg');"
     data-img-width="1600" data-img-height="1064" data-diff="100">
   </div>
 
-  <div class="not-fullscreen background parallax"
-    style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_6643.jpg');"
+  <div class="eighth-screen background parallax"
+    style="background-image:url('/images/img_2.jpg');"
     data-img-width="1600" data-img-height="1064" data-diff="100">
   </div>
 
-  <section class="not-fullscreen">
+  <section class="half-screen">
   </section>
 
-  <div class="fullscreen background parallax"
-    style="background-image:url('http://www.minimit.com/images/picjumbo.com_DSC_3274.jpg');"
+  <div class="full-screen background parallax"
+    style="background-image:url('/images/img_3.jpg');"
     data-img-width="1600" data-img-height="1064" data-diff="100" data-oriz-pos="100%">
   </div>
 
-  <section class="fullscreen">
-  </section>
-
-  <div class="fullscreen background parallax"
-    style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_9857.jpg');"
-    data-img-width="1600" data-img-height="1064" data-diff="100">
-  </div>
-
-  <div class="not-fullscreen background parallax"
-    style="background-image:url('http://www.minimit.com/images/picjumbo.com_IMG_8697.jpg');"
-    data-img-width="1600" data-img-height="1064" data-diff="100">
-  </div>
-
-  <section class="fullscreen">
-  </section>
-
   <script>
-    /* detect touch */
-    if("ontouchstart" in window) {
-      document.documentElement.className = document.documentElement.className + " touch";
-    }
-
-    if(!$("html").hasClass("touch")){
-      /* background fix */
-      $(".parallax").css("background-attachment", "fixed");
-    }
-
-    $(window).resize(fullscreen.resize);
-    $(window).focus(fullscreen.resize);
-
-    fullscreen.resize();
-    fullscreen.parallax();
-
-    if(!$("html").hasClass("touch")){
-      $(window).resize(fullscreen.parallax);
-      //$(window).focus(fullscreen.parallax);
-      $(window).scroll(fullscreen.parallax);
-      fullscreen.parallax();
-    }
+    Meteor.call('fullscreen');
   </script>
 </template>

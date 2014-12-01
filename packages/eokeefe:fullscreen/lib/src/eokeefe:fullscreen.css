@@ -13,17 +13,27 @@ html, body {
   height:100%;
 }
 
-.fullscreen {
+.full-screen {
   width:100%;
   min-height:100%;
 }
 
-.not-fullscreen,
+.half-screen,
+.quarter-screen,
+.eighth-screen,
 .fullscreen.not-overflow {
   height:100%;
   overflow:hidden;
 }
 
-.not-fullscreen {
+.half-screen {
   height:50%;
+}
+
+.quarter-screen {
+  height:25%;
+}
+
+.eighth-screen {
+  height:12.5%;
 }
