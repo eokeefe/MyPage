@@ -3,6 +3,7 @@ MyPage
 
 
 Summary:
+--------
   This application is a sandbox for meteor.js package development.
 
 Package being development:
