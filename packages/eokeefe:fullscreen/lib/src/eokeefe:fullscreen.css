@@ -12,26 +12,28 @@ html, body {
   /* give this to all tags from html to .fullscreen */
   height:100%;
 }
-.fullscreen,
-.content-a {
+
+.full-screen {
   width:100%;
   min-height:100%;
 }
-.not-fullscreen,
-.not-fullscreen .content-a,
-.fullscreen.not-overflow,
-.fullscreen.not-overflow .content-a {
+
+.half-screen,
+.quarter-screen,
+.eighth-screen,
+.fullscreen.not-overflow {
   height:100%;
   overflow:hidden;
 }
 
-/* content centering styles */
-.content-a {
-  display:table;
+.half-screen {
+  height:50%;
 }
-.content-b {
-  display:table-cell;
-  position:relative;
-  vertical-align:middle;
-  text-align:center;
+
+.quarter-screen {
+  height:25%;
+}
+
+.eighth-screen {
+  height:12.5%;
 }

@@ -8,6 +8,7 @@ autopublish
 insecure
 iron:router
 jquery
+templating
 email
 spiderable
 markdown
