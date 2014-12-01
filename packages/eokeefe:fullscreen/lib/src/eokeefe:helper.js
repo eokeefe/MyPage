@@ -8,7 +8,6 @@ Meteor.startup(function () {
   $(window).focus(fullscreen.resize);
 });
 
-
 Meteor.methods({
   fullscreen: function () {
     if(!$("html").hasClass("touch")){
