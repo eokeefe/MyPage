@@ -20,10 +20,6 @@ Package being development:
 Known issues:
 -------------
 
-1. Meteor is currently throwing:
-        Error invoking Method 'fullscreen': Method not found [404]
-However, method fullscreen is being executed properly.
-
-2. Meteor method fullscreen found at:
+1. Meteor method fullscreen found at:
         packages/eokeefe:fullscreen/lib/src/eokeefe:helper.js
 Currently only works when it is called with the template that requires it. This makes package 'fullscreen' not self contained. I need to find away to call fullscreen when it's needed internally.
