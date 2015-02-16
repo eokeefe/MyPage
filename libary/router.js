@@ -1,5 +1,3 @@
-Router.map(function () {
-  this.route('layout', {
-    path: '/'
-  });
+Router.route('/', function () {
+  this.render('menu');
 });
